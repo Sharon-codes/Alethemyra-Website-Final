@@ -19,7 +19,7 @@ export function GlareCard(props: React.HTMLAttributes<HTMLDivElement>) {
       y: 0,
     },
   });
-  const containerStyle: React.CSSProperties & Record<string, string> = {
+  const containerStyle: React.CSSProperties & Record<string, string | number> = {
     "--m-x": "50%",
     "--m-y": "50%",
     "--r-x": "0deg",
