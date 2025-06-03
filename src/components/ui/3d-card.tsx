@@ -40,14 +40,14 @@ export const CardItem = <T extends React.ElementType = "div">(
     ? { transform: `translateZ(${typeof translateZ === "number" ? `${translateZ}px` : translateZ})`, ...(style || {}) }
     : style;
 
-  return (
-    <Component
-      {...(typeof Component === "string" ? { className } : {})}
-      {...(mergedStyle ? { style: mergedStyle } : {})}
-      {...restProps}
-    >
-      {children}
-    </Component>
+  return React.createElement(
+    Component,
+    {
+      className,
+      style: mergedStyle,
+      ...restProps
+    },
+    children
   );
 };
 CardBody.displayName = "CardBody";
