@@ -9,10 +9,10 @@ const Card: React.FC = () => {
   };
 
   const maskImage = "url-to-image";
-  const style = {
+  const style: React.CSSProperties = {
     position: "absolute",
-    left: `${left}px`,
-    top: `${top}px`,
+    left: left,
+    top: top,
   };
 
   const anotherHandler = (e: React.MouseEvent<HTMLDivElement>) => {
