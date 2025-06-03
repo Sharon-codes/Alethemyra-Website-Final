@@ -61,13 +61,15 @@ export const EvervaultCard = ({
   );
 };
 
+import type { MotionValue } from "motion/react";
+
 export function CardPattern({
   mouseX,
   mouseY,
   randomString,
 }: {
-  mouseX: ReturnType<typeof useMotionValue>;
-  mouseY: ReturnType<typeof useMotionValue>;
+  mouseX: MotionValue<number>;
+  mouseY: MotionValue<number>;
   randomString: string;
 }) {
   const maskImage = useMotionTemplate`radial-gradient(250px at ${mouseX}px ${mouseY}px, white, transparent)`;
