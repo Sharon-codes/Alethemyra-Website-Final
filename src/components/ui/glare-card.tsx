@@ -32,7 +32,7 @@ export function GlareCard(props: React.HTMLAttributes<HTMLDivElement>) {
     "--radius": "48px",
     "--easing": "ease",
     "--transition": "var(--duration) var(--easing)",
-  } as any;
+  };
 
   const backgroundStyle = {
     "--step": "5%",
