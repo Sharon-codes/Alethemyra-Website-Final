@@ -1,13 +1,8 @@
 import { cn } from "@/lib/utils";
 import { useRef } from "react";
 
-export const GlareCard = ({
-  children,
-  className,
-}: {
-  children: React.ReactNode;
-  className?: string;
-}) => {
+export function GlareCard(props: React.HTMLAttributes<HTMLDivElement>) {
+  const { children, className } = props;
   const isPointerInside = useRef(false);
   const refElement = useRef<HTMLDivElement>(null);
   const state = useRef({
@@ -130,4 +125,4 @@ export const GlareCard = ({
       </div>
     </div>
   );
-};
+}
