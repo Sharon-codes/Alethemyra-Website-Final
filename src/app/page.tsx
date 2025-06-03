@@ -8,7 +8,6 @@ import { TypewriterEffect } from "@/components/ui/typewriter-effect";
 import { useEffect } from "react";
 import { CardStack } from "@/components/ui/card-stack";
 import { EvervaultCard } from "@/components/ui/evervault-card";
-import { useUser } from "@clerk/nextjs";
 import { TransformationCards } from "@/components/ui/card-spotlight";
 import AnimatedPinDemo from "@/components/3d-pin-demo";
 
