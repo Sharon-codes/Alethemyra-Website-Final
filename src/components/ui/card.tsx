@@ -4,18 +4,17 @@ const Card: React.FC = () => {
   const left = 0;
   const top = 0;
 
-  const handleSomething = (e: React.MouseEvent<HTMLDivElement>) => {
+  const handleSomething = () => {
     // handle something
   };
 
-  const maskImage = "url-to-image";
   const style: React.CSSProperties = {
     position: "absolute",
     left: left,
     top: top,
   };
 
-  const anotherHandler = (e: React.MouseEvent<HTMLDivElement>) => {
+  const anotherHandler = () => {
     // handle another thing
   };
 
