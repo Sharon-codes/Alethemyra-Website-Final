@@ -23,7 +23,7 @@ export const CardSpotlight = ({
     clientX,
     clientY,
   }: ReactMouseEvent<HTMLDivElement>) {
-    let { left, top } = currentTarget.getBoundingClientRect();
+    const { left, top } = currentTarget.getBoundingClientRect();
 
     mouseX.set(clientX - left);
     mouseY.set(clientY - top);
@@ -106,7 +106,7 @@ export const TransformationCards = () => {
             <li>ML-driven behavioural and operational scoring</li>
             <li>
               Tailored to segment-specific insights and the realities of MSMEs — no
-              "one-size-fits-all" approach
+              &quot;one-size-fits-all&quot; approach
             </li>
             <li>
               Real-time risk monitoring with geo-risk overlays and fraud detection

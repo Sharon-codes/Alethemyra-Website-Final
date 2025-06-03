@@ -16,24 +16,35 @@ export const CardBody = forwardRef<HTMLDivElement, React.HTMLProps<HTMLDivElemen
   )
 );
 
-export const CardItem = ({
-  children,
-  className = "",
-  as: Component = "div",
-  translateZ,
-  ...props
-}: {
-  children: React.ReactNode;
+type CardItemProps<T extends React.ElementType> = {
+  children?: React.ReactNode;
   className?: string;
-  as?: any;
+  as?: T;
   translateZ?: number | string;
-  [key: string]: any;
-}) => {
-  const style = translateZ
-    ? { transform: `translateZ(${typeof translateZ === "number" ? `${translateZ}px` : translateZ})` }
-    : undefined;
+  style?: React.CSSProperties;
+} & Omit<React.ComponentPropsWithoutRef<T>, 'as' | 'translateZ' | 'children' | 'className' | 'style'>;
+
+export const CardItem = <T extends React.ElementType = "div">(
+  props: CardItemProps<T>
+): React.ReactElement => {
+  const {
+    children,
+    className = "",
+    as,
+    translateZ,
+    style,
+    ...restProps
+  } = props;
+  const Component = (as || "div") as React.ElementType;
+  const mergedStyle = translateZ
+    ? { transform: `translateZ(${typeof translateZ === "number" ? `${translateZ}px` : translateZ})`, ...(style || {}) }
+    : style;
   return (
-    <Component className={className} style={style} {...props}>
+    <Component
+      className={className}
+      style={mergedStyle}
+      {...restProps}
+    >
       {children}
     </Component>
   );

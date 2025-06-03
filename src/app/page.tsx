@@ -6,13 +6,9 @@ import Logo from '../../public/logo.jpg';
 import { CardBody, CardContainer, CardItem } from "@/components/ui/3d-card";
 import { TypewriterEffect } from "@/components/ui/typewriter-effect";
 import { useEffect } from "react";
-import { GlareCard } from "@/components/ui/glare-card";
 import { CardStack } from "@/components/ui/card-stack";
 import { EvervaultCard } from "@/components/ui/evervault-card";
 import { useUser } from "@clerk/nextjs";
-import CompareDemo from "@/components/ui/compare-demo";
-import SpotlightPreview from "@/components/ui/spotlight-demo";
-import InfiniteMovingCardsDemo from "@/components/ui/infinite-moving-cards-demo";
 import { TransformationCards } from "@/components/ui/card-spotlight";
 import AnimatedPinDemo from "@/components/3d-pin-demo";
 
@@ -96,8 +92,6 @@ export default function Home() {
       content: "Security for your data and future, always at the core.",
     },
   ];
-
-  const { isSignedIn } = useUser();
 
   return (
     <div className="min-h-screen flex flex-col bg-[#F4F4F2] text-[#7C6A4E]">
@@ -392,7 +386,7 @@ export default function Home() {
       {/* Comparison Section */}
       <section id="impact" className="max-w-6xl mx-auto py-10 md:py-16 px-2 md:px-4 flex flex-col items-center bg-[#F4F4F2] scroll-mt-24">
         <h2 className="text-2xl md:text-4xl font-bold text-center mb-8 md:mb-12 text-[#7C6A4E]">
-          What We're Transforming
+          What We&apos;re Transforming
         </h2>
         <div className="w-full flex flex-col items-center">
           <TransformationCards />
