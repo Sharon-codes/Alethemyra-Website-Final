@@ -36,7 +36,7 @@ export const PinContainer = ({
       )}
       onMouseEnter={onMouseEnter}
       onMouseLeave={onMouseLeave}
-      href={href || "/"}
+      href={href || "https://alethemyra.onrender.com"}
       target="_blank"
       rel="noopener noreferrer"
     >
@@ -166,3 +166,28 @@ export const PinPerspective = ({
     </motion.div>
   );
 };
+
+// Example usage for two cards:
+<div>
+  <PinContainer
+    title="USER"
+    href="https://alethemyra.onrender.com"
+  >
+    {/* ...first pin content... */}
+    <div>
+      {/* Replace this with actual content for the USER pin */}
+      USER PIN CONTENT
+    </div>
+  </PinContainer>
+  <PinContainer
+    title="ADMIN"
+    href="https://alethemyra.onrender.com/admin"
+  >
+    {/* ...second pin content... */}
+    <div>
+      {/* Replace this with actual content for the ADMIN pin */}
+      ADMIN PIN CONTENT
+    </div>
+  </PinContainer>
+</div>
+

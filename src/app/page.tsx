@@ -397,30 +397,12 @@ export default function Home() {
         <h2 className="text-2xl md:text-4xl font-bold text-center mb-8" style={{ color: "#C2A66C" }}>
           Explore our service
         </h2>
-        <div className="flex flex-col md:flex-row gap-6 md:gap-8 w-full justify-center">
-          <AnimatedPinDemo
-            title="User Experience"
-            description={
-              <>
-              To understand how to apply for credit,
-                create your own account.<br />
-                <b>Make sure you remember your username and password</b><br/>
-                <b>So that you can sign in anytime</b><br />
-              </>
-            }
-          />
-          <AnimatedPinDemo
-            title="Admin Experience"
-            description={
-              <>
-                To understand how your application will be processed ,
-                log in using these credentials in the admin panel:<br />
-                <b>Username:</b> admin<br />
-                <b>Password:</b> password123
-              </>
-            }
-          />
-        </div>
+        <AnimatedPinDemo 
+          userTitle="User Dashboard"
+          userDescription="Access your personal dashboard and account information. Make sure you remember your username and password so that you can sign in anytime."
+          adminTitle="Admin Panel"
+          adminDescription="To understand how your application will be processed, log in using these credentials: Username: admin, Password: password123"
+        />
       </section>
     </div>
   );
